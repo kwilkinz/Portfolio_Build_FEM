@@ -1,0 +1,100 @@
+/* Variables declared here under root - are the colors taking place 
+within our pages as well as fonts, sizes, etc. */
+
+:root {
+    --primary: ;
+    --secondary: ;
+    --background: #171321;
+    --color: #f7f8fa;
+    --aqua: #86fbfb;
+    --link: #e310cb;
+    --linkHover: #ff17e4;
+    --font-size: 1.3rem;
+    --mono: "Oxygen mono", monospace;
+    --sans: Oxygen, sans-serif; 
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* Generic Styles for the page */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--sans);
+    background-color: var(--background);
+    color: var(--color);
+    font-size: var(--font-size);
+}
+
+/* Getting rid of margin defaults */
+h1, h2, h3 {
+    margin: 0;
+}
+
+/* Default link styling */
+a {
+    color: var(--links)
+}
+
+a:hover {
+    color: var(--linkHover);
+    text-decoration: none;
+}
+
+/* Navagation 1 Section */
+
+nav {
+    font-family: var(--mono);
+    font-size: 80%;
+    padding: 4rem 1rem;
+}
+
+nav h1 a {
+    font-family: var(--sans);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav [class*="fa-"] {
+    font-size: 150%;
+    color: var(--aqua);
+}
+
+nav h1 [class*="fa-"] {
+    font-size: 100%;
+    color: var(--aqua);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+nav a:hover,
+nav [class*="fa-"]:hover {
+    color: var(--link);
+}
+
